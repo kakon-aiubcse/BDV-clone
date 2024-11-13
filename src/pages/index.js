@@ -32,7 +32,7 @@ const HomePage = () => {
         <div className="absolute top-[2350px] right-[280px] ">
           <Cards />
         </div>
-        <div className="absolute top-[3850px] right-[0px] ">
+        <div className="absolute top-[4850px] right-[200px] w-[1400px] ">
           <Footer/>
         </div>
       </div>

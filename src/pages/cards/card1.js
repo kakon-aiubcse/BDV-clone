@@ -1,25 +1,43 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { fetchnormalnewsdata } from "../api/connection";
 
 const Card1 = () => {
+  const [normalNewsData, setNormalNewsData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await fetchnormalnewsdata(); // Fetch the data
+        setNormalNewsData(data || []); // Set the data to state
+        console.log(data); // Log the data to check the structure
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
-    <>
-      <div className="flex relative w-[1410px] h-[400px] bg-[#f0f6fd]">
-        <div className="flex flex-col items-center justify-center space-y-2 bg-white">
+    <div className="flex relative w-[1410px] h-[400px] bg-[#f0f6fd]">
+      {normalNewsData.length > 0 && normalNewsData.map((news) => (
+        <div key={news.id} className="flex flex-col items-center justify-center space-y-2 bg-white">
           <img
-            src="https://admin.bangladeshdefencevoice.com/storage/uploads/blogImg/1727942423.jpg"
-            className="w-[447px] h-[207px]"
+            src={`https://admin.bangladeshdefencevoice.com/storage/uploads/blogImg/${news.photo}`} // Dynamically set image URL
+            alt={news.title}
+            className="w-[44
+            7px] h-[207px]"
           />
           <span className="flex relative top-[30px] h-[200px] w-[447px] font-bold text-center text-[20px] justify-center">
-            Turkish fighter jet KAAN featured in Chinese military media
+            {news.title} {/* Dynamically render title */}
           </span>
           <span className="flex relative text-gray-600 top-[10px] h-[200px] w-[447px] font-normal text-center text-[15px] justify-center">
-            Türkiye’s ambitious defense project, the National Combat Aircraft
-            KAAN, which garnered considerable attention in global media was
-            recently recognized in...
+            {news.post ? news.post.substring(0, 150) + '...' : ''} {/* Dynamically render a portion of the post */}
           </span>
         </div>
-      </div>
-    </>
+      ))}
+    </div>
   );
 };
+
 export default Card1;

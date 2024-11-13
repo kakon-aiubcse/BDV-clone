@@ -127,7 +127,7 @@ const Footer = () => {
                 </div>
                 <div className="py-p_12px">
                   <img
-                    src="http://localhost:5173/src/assets/logo4.png"
+                    src="https://bangladeshdefencevoice.com/frontend/assets/Logo/logo4.png"
                     alt=""
                     className="w-[240px]"
                   />
