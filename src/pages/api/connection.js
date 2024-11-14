@@ -127,3 +127,48 @@ export const fetchcatnewsdata = async () => {
     return null;
   }
 };
+
+let categoryNews = null;
+
+export const fetchcategoryNews = async () => {
+  if (categoryNews) return categoryNews;
+
+  try {
+    const res = await fetch('https://admin.bangladeshdefencevoice.com/api/get-news-with-category/1');
+    if (!res.ok) {
+      throw new Error(`Failed to fetch data: ${res.statusText}`);
+    }
+
+    const data = await res.json();
+    categoryNews = data.newsData || [];
+    
+    return categoryNews;
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
+};
+
+let newsDetails = null;
+let relatedNewsData = null;
+
+export const fetchnewsDetails = async () => {
+  if (newsDetails) return { newsDetails, relatedNewsData };
+
+  try {
+    const res = await fetch('https://admin.bangladeshdefencevoice.com/api/get-news-details/1');
+    if (!res.ok) {
+      throw new Error(`Failed to fetch data: ${res.statusText}`);
+    }
+
+    const data = await res.json();
+    newsDetails = data.singleNewsData || [];
+    relatedNewsData = data.relatedNewsData || [];
+
+    return { newsDetails, relatedNewsData };
+   
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
+};

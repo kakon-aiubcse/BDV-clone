@@ -53,7 +53,7 @@ const MultipleCards = () => {
                   <div key={index} className="">
                     {index === 0 ? (
                       <Link
-                        href={`/news-details/${item.id}`}
+                        href={`news/newsDetails/${item.id}`}
                         className="h-full"
                       >
                         <div>

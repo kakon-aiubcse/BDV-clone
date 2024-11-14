@@ -14,22 +14,22 @@ const Footer = () => {
                 </h6>
                 <ul className="list-none font-bold text-black">
                 <li>
-                    <Link href="/Defence_Diplomacy" className=" hover:underline">
+                    <Link  href={`/news/categoryNews/2`} className=" hover:underline">
                     Defence & Diplomacy
                     </Link>
                   </li>
                   <li>
-                    <Link href="/Defence_Diplomacy" className=" hover:underline">
+                    <Link  href={`/news/categoryNews/3`} className=" hover:underline">
                   Geopolitics
                     </Link>
                   </li>
                   <li>
-                    <Link href="/Defence_Diplomacy" className=" hover:underline">
+                    <Link  href={`/news/categoryNews/1`} className=" hover:underline">
                    National
                     </Link>
                   </li>
                   <li>
-                    <Link href="/Defence_Diplomacy" className=" hover:underline">
+                    <Link  href={`/news/categoryNews/4`} className=" hover:underline">
                     Opinion
                     </Link>
                   </li>
