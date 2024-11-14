@@ -4,13 +4,12 @@ import Home from "./home";
 import Slider from "./component/slider";
 import Card1 from "./cards/card1";
 import Card2 from "./cards/card2";
-import Cards from "./cards/cards";
+import MultipleCards from "./cards/multipleCards";
 import Footer from "./component/footer";
 
 const HomePage = () => {
   return (
-    <>
-      <div className="h-[5000px] font-vfsans">
+    <>  <div className="h-[5000px] font-vfsans">
         <div className="absolute left-[200px]">
           <Nav />
         </div>
@@ -29,14 +28,14 @@ const HomePage = () => {
           <Card2 />
           <div className="h-[4px] w-[1408px] bg-black flex absolute top-[510px] left-[0px]"></div>
         </div>{" "}
-        <div className="absolute top-[2350px] right-[280px] ">
-          <Cards />
+        <div className="absolute top-[2350px] right-[210px] ">
+          <MultipleCards />
         </div>
-        <div className="absolute top-[4850px] right-[200px] w-[1400px] ">
-          <Footer/>
-        </div>
+      <div className="absolute top-[3900px]  w-full">
+        <Footer />
       </div>
-    </>
+    </div></>
+    
   );
 };
 

@@ -76,7 +76,7 @@ const Home = () => {
                     {newsItem.title}
                   </h2>
                   <div
-                    className="text-[15px] hover:text-[15.3px]"
+                    className="text-[15px] hover:text-[15px]"
                     dangerouslySetInnerHTML={{ __html: newsItem.post }}
                   />
                 </div>

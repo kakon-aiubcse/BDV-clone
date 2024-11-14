@@ -9,7 +9,7 @@ const Card1 = () => {
       try {
         const data = await fetchnormalnewsdata(); // Fetch the data
         setNormalNewsData(data || []); // Set the data to state
-        console.log(data); // Log the data to check the structure
+      
       } catch (error) {
         console.error("Error fetching data:", error);
       }

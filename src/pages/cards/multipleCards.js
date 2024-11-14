@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { fetchcatnewsdata } from "../api/connection";
 import Link from "next/link";
 
-const Cards = () => {
+const MultipleCards = () => {
   const [catNewsData, setCatNewsData] = useState([]);
   const imgUrl = `https://admin.bangladeshdefencevoice.com/storage/uploads/blogImg/`;
 
@@ -102,4 +102,4 @@ const Cards = () => {
   );
 };
 
-export default Cards;
+export default MultipleCards;

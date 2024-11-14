@@ -11,7 +11,7 @@ const Slider = () => {
       try {
         const data = await fetchslidernewsData();
         setSliderNewsdata(data || []);
-        console.log(data);
+        
       } catch (error) {
         console.error("Error fetching data:", error);
       }
