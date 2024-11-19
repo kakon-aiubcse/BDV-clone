@@ -8,6 +8,7 @@ module.exports = {
       },
       screens: {
         tab: { max: "1535px" },
+        minidesk: { max: "1280px" },
       },
     },
   },
