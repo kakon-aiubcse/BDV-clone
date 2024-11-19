@@ -4,9 +4,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        vfsans: ['VFSans Regular', 'sans-serif'], // Use VFSans Regular as default sans font
+        vfsans: ["VFSans Regular", "sans-serif"], // Use VFSans Regular as default sans font
       },
-    
+      screens: {
+        tab: { max: "1535px" },
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],

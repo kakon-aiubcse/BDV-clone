@@ -9,33 +9,35 @@ import Footer from "./component/footer";
 
 const HomePage = () => {
   return (
-    <>  <div className="h-[5000px] font-vfsans">
-        <div className="absolute left-[200px]">
+    <>
+      {" "}
+      <div className="h-[5000px] font-vfsans">
+        <div className="absolute left-[200px] tab:absolute tab:left-[50px]">
           <Nav />
         </div>
-        <div className="absolute left-[200px] top-[210px]">
+        <div className="absolute left-[200px] top-[210px] tab:absolute tab:left-[70px]">
           <Home />
         </div>
-        <div className="absolute top-[900px] right-[680px] ">
+        <div className="absolute top-[900px] right-[680px] tab:absolute tab:right-[450px]">
           <Slider />
-          <div className="h-[4px] w-[1408px] bg-black flex absolute top-[430px] left-[250px]"></div>
+          <div className="h-[4px] w-[1408px] bg-black flex absolute top-[430px] left-[250px] tab:absolute tab:left-[250px]"></div>
         </div>{" "}
-        <div className="absolute top-[1350px] right-[280px] ">
+        <div className="absolute top-[1350px] right-[280px] tab:absolute tab:right-[60px]">
           <Card1 />
-          <div className="h-[4px] w-[1408px] bg-black flex absolute top-[430px] left-[0px]"></div>
+          <div className="h-[4px] w-[1408px] bg-black flex absolute top-[430px] left-[0px] tab:absolute"></div>
         </div>{" "}
-        <div className="absolute top-[1810px] right-[1360px] ">
+        <div className="absolute top-[1810px] right-[1360px] tab:absolute tab:right-[1090px]">
           <Card2 />
-          <div className="h-[4px] w-[1408px] bg-black flex absolute top-[510px] left-[0px]"></div>
+          <div className="h-[4px] w-[1408px] bg-black flex absolute top-[510px] left-[0px] tab:absolute tab:left-[-50px]"></div>
         </div>{" "}
-        <div className="absolute top-[2350px] right-[210px] ">
+        <div className="absolute top-[2350px] right-[210px] tab:absolute tab:right-[120px]">
           <MultipleCards />
         </div>
-      <div className="absolute top-[3900px]  w-full">
-        <Footer />
+        <div className="absolute top-[3900px]  w-full tab:absolute tab:top-[4100px]">
+          <Footer />
+        </div>
       </div>
-    </div></>
-    
+    </>
   );
 };
 
